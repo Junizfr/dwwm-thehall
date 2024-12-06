@@ -2,12 +2,18 @@
 :root {
     --orange: #CCA57C;
     --gray: #272727;
+    --bg-gray: #606060
 }
+
 * {
     text-decoration: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--bg-gray);
 }
 
 header {
@@ -117,50 +123,96 @@ nav {
 .bg-gray {
     background-color: var(--gray);
 }
-
-.about {
+.about-section {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--gray);
 }
 
-.section-title {
-    text-align: center;
-    color: white;
-    font-size: 48px;
+.about-content {
+    max-width: 60%;
+}
+
+.about-content h1 {
+    font-size: 36px;
     font-family: 'Montserrat-Bold';
-    padding-top: 64px;
-}
-
-.section-subtitle {
-    color: white;
-    font-size: 20px;
-    font-family: 'Montserrat-Bold';
-    padding-top: 64px;
-    padding-left: 128px;
-}
-
-.section-text {
-    color: white;
-    font-size: 16px;
-    font-family: 'Montserrat-Bold';
-    padding-top: 32px;
-    padding-left: 128px;
-}
-
-.section-citation {
+    color: #eee;
     text-align: right;
-    color: var(--orange);
-    font-size: 16px;
+}
+
+.about-content .highlight {
+    color: var(--orange); /* Goldish color */
+}
+
+.about-content h2 {
+    font-size: 24px;
+    margin: 20px 0;
     font-family: 'Montserrat-Bold';
-    padding-top: 32px;
+    color: white;
 }
 
-.section-img {
-    flex-direction: row;
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: white;
+    font-family: 'Montserrat-Light';
+    font-weight: bold;
 }
 
-.orange {
-    color: var(--orange);
+blockquote {
+    font-size: 16px;
+    color: #d4a373;
+    border-left: 4px solid var(--orange);
+    font-size: 12px;
+    padding-left: 20px;
+    margin: 20px 0;
+    line-height: 1.8;
+    font-family: 'Montserrat-Bold';
+}
+
+.about-image {
+    max-width: 35%;
+    position: relative;
+    padding-top: 14%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-caption {
+    text-align: center;
+    background-color: var(--orange);
+    color: var(--gray);
+    padding: 10px 0;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 @font-face {
